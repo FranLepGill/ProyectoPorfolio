@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
+  const nameArray = ['r', 'a', 'n', 'c', 'o']
   const jobArray = [
     'w',
     'e',
@@ -24,10 +24,15 @@ const Home = () => {
     '.',
   ]
 
+  //da error88
+
   useEffect(() => {
-    return setTimeout(() => {
+    const timerId = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 4000)
+
+    // Cleanup function
+    return () => clearTimeout(timerId)
   }, [])
 
   return (
@@ -49,7 +54,7 @@ const Home = () => {
           <AnimatedLetters
             letterClass={letterClass}
             strArray={jobArray}
-            idx={22}
+            idx={20}
           />
         </h1>
         <h2>Frontend/javascript/student</h2>
