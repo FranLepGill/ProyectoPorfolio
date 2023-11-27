@@ -3,24 +3,31 @@ import LogoTitle from '../../assets/images/logo-s.png'
 import { Link } from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
+import Logo from './Logo'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const nameArray = ['r', 'a', 'n', 'c', 'o']
   const jobArray = [
-    'w',
+    'E',
+    'n',
+    'g',
+    'i',
+    'n',
     'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
     'e',
     'r',
+    'i',
+    'n',
+    'g',
+    ' ',
+    's',
+    't',
+    'u',
+    'd',
+    'e',
+    'n',
+    't',
     '.',
   ]
 
@@ -57,11 +64,12 @@ const Home = () => {
             idx={20}
           />
         </h1>
-        <h2>Frontend/javascript/student</h2>
+        <h2>Frontend/Backend/FullStack</h2>
         <Link to="/contact" className="flat-buttom">
           CONTACT ME{' '}
         </Link>
       </div>
+      <Logo />
     </div>
   )
 }
